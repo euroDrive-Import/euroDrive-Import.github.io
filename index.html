@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EuroDrive Import | Gestión</title>
+    <style>
+        body { font-family: 'Helvetica', sans-serif; background-color: #0a0a0a; color: white; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .box { background: #111; padding: 30px; border: 1px solid #222; width: 100%; max-width: 350px; text-align: center; }
+        h1 { font-size: 22px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 30px; }
+        input { width: 100%; background: #1a1a1a; border: 1px solid #333; padding: 12px; color: white; margin-bottom: 20px; box-sizing: border-box; }
+        button { width: 100%; background: white; color: black; border: none; padding: 15px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+        button:hover { background: #bbb; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>EuroDrive</h1>
+        <form action="https://formspree.io/f/tu_codigo_aqui" method="POST">
+            <input type="text" name="nombre" placeholder="NOMBRE COMPLETO" required>
+            <input type="tel" name="telefono" placeholder="TELÉFONO" required>
+            <input type="email" name="email" placeholder="EMAIL" required>
+            <input type="text" name="coche" placeholder="¿QUÉ COCHE BUSCAS?" required>
+            <button type="submit">Enviar Solicitud</button>
+        </form>
+    </div>
+</body>
+</html>
