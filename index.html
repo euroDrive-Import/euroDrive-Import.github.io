@@ -3,26 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EuroDrive Import | Gestión</title>
+    <title>EuroDrive Import | Registro</title>
     <style>
-        body { font-family: 'Helvetica', sans-serif; background-color: #0a0a0a; color: white; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .box { background: #111; padding: 30px; border: 1px solid #222; width: 100%; max-width: 350px; text-align: center; }
-        h1 { font-size: 22px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 30px; }
-        input { width: 100%; background: #1a1a1a; border: 1px solid #333; padding: 12px; color: white; margin-bottom: 20px; box-sizing: border-box; }
-        button { width: 100%; background: white; color: black; border: none; padding: 15px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
-        button:hover { background: #bbb; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background-color: #e3f0f6; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .logo-container { margin-top: 50px; text-align: center; margin-bottom: 40px; }
+        /* Usamos el logo de tu imagen */
+        .logo-img { max-width: 300px; height: auto; }
+        .card { width: 100%; max-width: 450px; }
+        h1 { font-size: 38px; font-weight: 900; color: #1a1a1a; line-height: 1.1; margin-bottom: 40px; text-transform: uppercase; }
+        input { width: 100%; padding: 18px; border: 1px solid #cedbe4; border-radius: 12px; background: #f0f5f9; font-size: 16px; box-sizing: border-box; color: #333; margin-bottom: 12px; }
+        input::placeholder { color: #8e9ca7; }
+        button { background: #1a1a1a; color: white; border: none; padding: 14px 30px; border-radius: 10px; font-size: 18px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 10px; margin-top: 20px; }
+        button:hover { background: #333; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>EuroDrive</h1>
+
+    <div class="logo-container">
+        <img src="https://raw.githubusercontent.com/euroDrive-Import/euroDrive-Import.github.io/main/logo.png" onerror="this.src='https://i.ibb.co/LzqM8Zp/logo-placeholder.png'" class="logo-img">
+    </div>
+
+    <div class="card">
+        <h1>FORMULARIO IMPORTACIÓN DE VEHÍCULO</h1>
+
         <form action="https://formspree.io/f/xgonlpzn" method="POST">
-            <input type="text" name="nombre" placeholder="NOMBRE COMPLETO" required>
-            <input type="tel" name="telefono" placeholder="TELÉFONO" required>
-            <input type="email" name="email" placeholder="EMAIL" required>
-            <input type="text" name="coche" placeholder="¿QUÉ COCHE BUSCAS?" required>
-            <button type="submit">Enviar Solicitud</button>
+            <input type="text" name="nombre" placeholder="Nombre completo:" required>
+            <input type="tel" name="telefono" placeholder="Teléfono:" required>
+            <input type="email" name="email" placeholder="Correo electrónico:" required>
+            <button type="submit">Next ➔</button>
         </form>
     </div>
+
 </body>
 </html>
