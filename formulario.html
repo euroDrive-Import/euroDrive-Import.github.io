@@ -1,89 +1,209 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EuroDrive Import | Registro</title>
+    <title>EuroDrive Import | Solicitud Premium</title>
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-theme="light">
-    <div class="page-wrapper">
-        <header class="site-header">
-            <div class="container header-top">
-                <a class="nav-logo" href="index.html">
-                    <img src="https://raw.githubusercontent.com/euroDrive-Import/euroDrive-Import.github.io/main/euroDrive-logo.png" alt="EuroDrive logo" class="logo-img-small" onerror="this.style.display='none';" />
-                    <span class="logo-text">EuroDrive</span>
-                </a>
-                <p class="header-tagline">Importación desde Alemania sin complicaciones</p>
-                <div class="controls">
-                    <label for="langSelector" class="visually-hidden">Idioma</label>
-                    <select id="langSelector" aria-label="Seleccionar idioma">
-                        <option value="es">ES</option>
-                        <option value="en">EN</option>
-                    </select>
-                    <button class="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">🌓</button>
-                </div>
-            </div>
-        </header>
 
-        <main>
-            <section class="form-section" aria-label="Formulario de importación">
-                <div class="container form-panel">
-                    <div class="form-logo-wrapper">
-                        <img src="https://raw.githubusercontent.com/euroDrive-Import/euroDrive-Import.github.io/main/euroDrive-logo.png" alt="EuroDrive logo grande" class="form-logo-large" onerror="this.style.display='none';">
+<body data-theme="dark">
+
+    <header class="site-header" id="header">
+        <div class="header-container header-top">
+            <a class="nav-logo" href="index.html">
+                <img src="logoOscuro.png" alt="EuroDrive logo" class="logo-img-small logo-dark-theme" />
+                <img src="logoClaro.png" alt="EuroDrive logo" class="logo-img-small logo-light-theme" />
+                <span class="logo-text">EuroDrive</span>
+            </a>
+            <p class="header-tagline" data-i18n="tagline">Importación de Coches</p>
+            <div class="controls">
+                <div class="custom-lang-selector" id="langSelectorWrapper">
+                    <div class="lang-selected" id="langSelected">
+                        <img src="https://flagcdn.com/w40/es.png" alt="ES" class="flag-icon" id="currentFlag">
                     </div>
-                    <h1>FORMULARIO IMPORTACIÓN DE VEHÍCULO</h1>
-                    <p>Completa tus datos y nos contactamos en 24h.</p>
-                    <form action="https://formspree.io/f/xgonlpzn" method="POST">
-                        <label for="nombre">Nombre completo</label>
-                        <input id="nombre" type="text" name="nombre" placeholder="Nombre completo" required>
-                        <label for="telefono">Teléfono</label>
-                        <input id="telefono" type="tel" name="telefono" placeholder="Teléfono" required>
-                        <label for="email">Correo electrónico</label>
-                        <input id="email" type="email" name="email" placeholder="Correo electrónico" required>
-                        <button type="submit" class="next-btn">Enviar solicitud</button>
+                    <ul class="lang-options" id="langOptions">
+                        <li data-value="es"><img src="https://flagcdn.com/w40/es.png" alt="ES" class="flag-icon"></li>
+                        <li data-value="en"><img src="https://flagcdn.com/w40/gb.png" alt="EN" class="flag-icon"></li>
+                        <li data-value="fr"><img src="https://flagcdn.com/w40/fr.png" alt="FR" class="flag-icon"></li>
+                        <li data-value="de"><img src="https://flagcdn.com/w40/de.png" alt="DE" class="flag-icon"></li>
+                        <li data-value="tzm"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Berber_flag.svg" alt="TZM"
+                                class="flag-icon"></li>
+                    </ul>
+                </div>
+                <button class="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">✨</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <div class="container">
+                <div class="form-panel" data-aos="zoom-in" data-aos-duration="1000">
+                    <h1 data-aos="fade-down" data-aos-delay="200" data-i18n="formH1">Encuentra Tu Vehículo Ideal</h1>
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;" data-aos="fade-up"
+                        data-aos-delay="300" data-i18n="formP">
+                        Rellena los datos para que uno de nuestros expertos se ponga en contacto contigo en las próximas
+                        24 horas y empiece la búsqueda de tu coche en Alemania.
+                    </p>
+                    <form action="https://formspree.io/f/xgonlpzn" method="POST" data-aos="fade-up" data-aos-delay="400"
+                        id="multi-step-form">
+
+                        <!-- PISO 1: DATOS PERSONALES -->
+                        <div id="step-1">
+                            <h2 style="margin-bottom: 20px; font-size: 1.5rem; color: var(--primary);"
+                                data-i18n="formStep1">1. Datos de Contacto</h2>
+                            <div class="form-group">
+                                <label for="nombre" data-i18n="labelNombre">Nombre y Apellidos <span
+                                        style="color:var(--primary)">*</span></label>
+                                <input id="nombre" type="text" name="nombre" placeholder="Ej: Juan Pérez"
+                                    data-i18n-ph="phNombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono" data-i18n="labelTel">Número de Móvil <span
+                                        style="color:var(--primary)">*</span></label>
+                                <input id="telefono" type="tel" name="telefono" placeholder="+34 600..." required>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 30px;">
+                                <label for="email" data-i18n="labelEmail">Correo Electrónico <span
+                                        style="color:var(--primary)">*</span></label>
+                                <input id="email" type="email" name="email" placeholder="tu@email.com" required>
+                            </div>
+                            <button type="button" class="next-btn" id="btn-next" data-i18n="btnNext">Siguiente Paso
+                                →</button>
+                        </div>
+
+                        <!-- PISO 2: DATOS DEL VEHÍCULO -->
+                        <div id="step-2" style="display: none;">
+                            <h2 style="margin-bottom: 20px; font-size: 1.5rem; color: var(--primary);"
+                                data-i18n="formStep2">2. Datos del Vehículo</h2>
+
+                            <div class="form-group">
+                                <label for="marca" data-i18n="labelMarca">Marca <span
+                                        style="color:var(--primary)">*</span></label>
+                                <input id="marca" type="text" name="marca" placeholder="Ejemplo: Audi"
+                                    data-i18n-ph="phMarca" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="modelo" data-i18n="labelModelo">Modelo <span
+                                        style="color:var(--primary)">*</span></label>
+                                <input id="modelo" type="text" name="modelo" placeholder="Ejemplo: A5"
+                                    data-i18n-ph="phModelo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ano" data-i18n="labelAno">Año de matriculación <span
+                                        style="color:var(--primary)">*</span></label>
+                                <input id="ano" type="text" name="ano" placeholder="Ejemplo: 2015" data-i18n-ph="phAno"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="kms" data-i18n="labelKms">Kilometraje Max <span
+                                        style="color:var(--primary)">*</span></label>
+                                <input id="kms" type="text" name="kms" placeholder="Ejemplo: 180.000KM"
+                                    data-i18n-ph="phKms" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="combustible" data-i18n="labelCombustible">Combustible <span
+                                        style="color:var(--primary)">*</span></label>
+                                <select id="combustible" name="combustible" required>
+                                    <option value="" disabled selected data-i18n="optSelect">Selecciona una opción
+                                    </option>
+                                    <option value="Diésel" data-i18n="optDiesel">Diésel</option>
+                                    <option value="Gasolina" data-i18n="optGas">Gasolina</option>
+                                    <option value="Híbrido" data-i18n="optHyb">Híbrido</option>
+                                    <option value="Eléctrico" data-i18n="optElec">Eléctrico</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="transmision" data-i18n="labelTrans">Transmisión <span
+                                        style="color:var(--primary)">*</span></label>
+                                <select id="transmision" name="transmision" required>
+                                    <option value="" disabled selected data-i18n="optSelect">Selecciona una opción
+                                    </option>
+                                    <option value="Manual" data-i18n="optMan">Manual</option>
+                                    <option value="Automático" data-i18n="optAuto">Automático</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="presupuesto" data-i18n="labelPresupuesto">Presupuesto <span
+                                        style="color:var(--primary)">*</span></label>
+                                <input id="presupuesto" type="text" name="presupuesto" placeholder="Ejemplo: 15.000€"
+                                    data-i18n-ph="phPresupuesto" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label for="extras" data-i18n="labelExtras">Extras <span
+                                        style="color:var(--primary)">*</span></label>
+                                <textarea id="extras" name="extras"
+                                    placeholder="Ejemplo: Asientos de cuero, Techo solar, etc..."
+                                    data-i18n-ph="phExtras" required></textarea>
+                            </div>
+
+                            <button type="submit" class="next-btn" id="btn-submit" data-i18n="btnSubmit">Enviar
+                                Solicitud Exclusiva</button>
+                            <button type="button" class="btn-outline" id="btn-prev"
+                                style="width: 100%; margin-top: 15px; border-radius: 16px;" data-i18n="btnBack">←
+                                Volver</button>
+                        </div>
                     </form>
                 </div>
-            </section>
-
-        <a href="https://wa.me/34667260898" class="whatsapp-btn" target="_blank" aria-label="Chat en WhatsApp">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
-            </svg>
-            <span>WhatsApp</span>
-        </a>
-
-    <footer class="main-footer bg-footer">
-            <div class="container footer-grid">
-                <div>
-                    <h4>EuroDrive Import</h4>
-                    <p>Servicio integral de importación de coches desde Alemania a España.</p>
-                </div>
-                <div>
-                    <h4>Enlaces</h4>
-                    <a href="#proceso">Proceso</a>
-                    <a href="formulario.html">Formulario</a>
-                </div>
-                <div>
-                    <h4>Contacto</h4>
-                    <p>Tel: +34 667 260 898</p>
-                    <p>Email: eurodrive.import09@gmail.com</p>
-                </div>
-                <div>
-                    <h4>Legal</h4>
-                    <a href="#">Aviso legal</a>
-                    <a href="#">Privacidad</a>
-                    <a href="#">Términos</a>
-                </div>
             </div>
-            <div class="container footer-bottom">
-                <p>© 2026 EuroDrive Import. Todos los derechos reservados.</p>
-            </div>
-        </footer>
+        </section>
+    </main>
 
+    <a href="https://wa.me/34667260898" class="whatsapp-btn" target="_blank" aria-label="Chat en WhatsApp"
+        data-aos="zoom-in">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
+            </path>
+        </svg>
+        <span>WhatsApp</span>
+    </a>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <a class="nav-logo" href="index.html" style="margin-bottom: 20px;">
+                    <span class="logo-text">EuroDrive</span>
+                </a>
+                <p data-i18n="footerPartner">Tu partner de confianza para subir el nivel de tu garaje con importaciones
+                    de élite desde Alemania.</p>
+            </div>
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h4 data-i18n="footerNav">Navegación</h4>
+                <a href="index.html#header" data-i18n="navInicio">Inicio</a>
+                <a href="index.html#proceso" data-i18n="navProceso">El Proceso</a>
+                <a href="formulario.html" data-i18n="navSolicitud">Solicitud</a>
+            </div>
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h4 data-i18n="footerContact">Contacto Directo</h4>
+                <a href="tel:+34667260898">📞 +34 667 260 898</a>
+                <a href="mailto:eurodrive.import09@gmail.com">✉️ eurodrive.import09@gmail.com</a>
+            </div>
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+                <h4 data-i18n="footerLegal">Legal</h4>
+                <a href="#" data-i18n="legalAviso">Aviso Legal</a>
+                <a href="#" data-i18n="legalPrivacidad">Política de Privacidad</a>
+                <a href="#" data-i18n="legalTerminos">Términos de Servicio</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p id="footer-text" data-i18n="footerRights">© 2026 EuroDrive Import. Exclusividad y Profesionalidad.</p>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,159 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EuroDrive Import | Tu coche desde Alemania</title>
+    <title>EuroDrive Import | Tu Coche Premium Desde Alemania</title>
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- AOS Animate On Scroll CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Local CSS -->
     <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-theme="light">
-    <div class="page-wrapper">
-        <header class="site-header">
-            <div class="container header-top">
-                <a class="nav-logo" href="index.html">
-                    <img src="https://raw.githubusercontent.com/euroDrive-Import/euroDrive-Import.github.io/main/euroDrive-logo.png" alt="EuroDrive logo" class="logo-img-small" onerror="this.style.display='none';" />
+
+<body data-theme="dark">
+
+    <header class="site-header" id="header">
+        <div class="header-container header-top">
+            <a class="nav-logo" href="index.html">
+                <img src="logoOscuro.png" alt="EuroDrive logo" class="logo-img-small logo-dark-theme" />
+                <img src="logoClaro.png" alt="EuroDrive logo" class="logo-img-small logo-light-theme" />
+                <span class="logo-text">EuroDrive</span>
+            </a>
+            <p class="header-tagline" data-i18n="tagline">Importación de Coches</p>
+            <div class="controls">
+                <div class="custom-lang-selector" id="langSelectorWrapper">
+                    <div class="lang-selected" id="langSelected">
+                        <img src="https://flagcdn.com/w40/es.png" alt="ES" class="flag-icon" id="currentFlag">
+                    </div>
+                    <ul class="lang-options" id="langOptions">
+                        <li data-value="es"><img src="https://flagcdn.com/w40/es.png" alt="ES" class="flag-icon"></li>
+                        <li data-value="en"><img src="https://flagcdn.com/w40/gb.png" alt="EN" class="flag-icon"></li>
+                        <li data-value="fr"><img src="https://flagcdn.com/w40/fr.png" alt="FR" class="flag-icon"></li>
+                        <li data-value="de"><img src="https://flagcdn.com/w40/de.png" alt="DE" class="flag-icon"></li>
+                        <li data-value="tzm"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Berber_flag.svg" alt="TZM"
+                                class="flag-icon"></li>
+                    </ul>
+                </div>
+                <button class="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">✨</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" aria-label="Hero principal">
+            <div class="container hero-wrapper">
+                <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                    <span class="eyebrow" data-i18n="heroEyebrow">Experiencia Premium</span>
+                    <h1 id="hero-h1" data-i18n="heroH1">Tu coche soñado desde Alemania,<br>en tu puerta.</h1>
+                    <p id="hero-p" data-i18n="heroP">Nos encargamos de todo: verificación exhaustiva, compra segura,
+                        transporte cerrado y matriculación nacional. Disfruta de la exclusividad sin preocupaciones.</p>
+                    <div class="hero-buttons">
+                        <a href="formulario.html" class="btn-primary" id="hero-btn" data-i18n="btnComenzar">Comenzar
+                            Importación</a>
+                        <a href="#proceso" class="btn-outline" data-i18n="btnDescubrir">Descubrir el Proceso</a>
+                    </div>
+                    <div class="hero-badges">
+                        <span class="badge" data-aos="fade-up" data-aos-delay="200" data-i18n="badge1">✨ Asesor
+                            Experto</span>
+                        <span class="badge" data-aos="fade-up" data-aos-delay="300" data-i18n="badge2">🛡️ Garantía
+                            Oficial</span>
+                        <span class="badge" data-aos="fade-up" data-aos-delay="400" data-i18n="badge3">🏎️ Entrega
+                            VIP</span>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="zoom-in-left" data-aos-duration="1200">
+                    <div class="custom-reel-player" aria-label="Reproductor de vídeo Reel">
+                        <video id="heroReel" src="reel.mp4" poster="miniatura.jpg" preload="none" loop playsinline
+                            class="reel-video"></video>
+                        <div class="reel-overlay">
+                            <span class="pulse-play">▶</span>
+                            <span
+                                style="position:absolute; bottom:20px; color:#fff; font-weight:500; font-size:14px; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Toca
+                                para reproducir</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARACTERÍSTICAS -->
+        <section class="feature-section container" aria-label="Características">
+            <h2 class="section-title" data-aos="fade-up" data-i18n="featTitle">¿Por qué el mercado <span id="dynamicMarket" class="flag-text-germany">Alemán</span>?
+            </h2>
+            <div class="feature-grid">
+                <article class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">💎</div>
+                    <h3 data-i18n="feat1Title">Stock Exclusivo</h3>
+                    <p data-i18n="feat1Desc">Acceso a unidades limitadas, configuraciones full-equip y ediciones
+                        especiales que no llegan a España.</p>
+                </article>
+                <article class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">💶</div>
+                    <h3 data-i18n="feat2Title">Máxima Rentabilidad</h3>
+                    <p data-i18n="feat2Desc">Ahorros significativos en vehículos de gamas altas y premium frente al
+                        mercado nacional.</p>
+                </article>
+                <article class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">🔍</div>
+                    <h3 data-i18n="feat3Title">Transparencia Total</h3>
+                    <p data-i18n="feat3Desc">Historiales auditados, kilómetros certificados y mantenimientos en
+                        servicios oficiales rigurosos.</p>
+                </article>
+                <article class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">⚡</div>
+                    <h3 data-i18n="feat4Title">Gestión Express</h3>
+                    <p data-i18n="feat4Desc">Del concesionario alemán a tu garaje en tiempos récord con matriculación
+                        incluida.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROCESO -->
+        <section class="process-section" id="proceso" aria-label="Proceso paso a paso">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-i18n="procTitle">Nuestra Metodología
+                    <span>Premium</span>
+                </h2>
+                <div class="step-wrapper">
+
+                    <article class="step-item" data-aos="fade-right" data-aos-delay="100">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4 data-i18n="proc1Title">Búsqueda Personalizada</h4>
+                            <p data-i18n="proc1Desc">Tú defines el modelo, presupuesto y extras. Nosotros rastreamos
+                                toda la red oficial alemana hasta encontrar la unidad perfecta.</p>
+                        </div>
+                    </article>
+
+                    <article class="step-item" data-aos="fade-left" data-aos-delay="200">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4 data-i18n="proc2Title">Verificación in situ</h4>
+                            <p data-i18n="proc2Desc">Nuestros expertos en Alemania comprueban estado, historial de
+                                siniestralidad, pintura y mecánica antes de dar luz verde.</p>
+                        </div>
+                    </article>
+
+                    <article class="step-item" data-aos="fade-right" data-aos-delay="300">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4 data-i18n="proc3Title">Compra y Burocracia</h4>
+                            <p data-i18n="proc3Desc">Gestionamos la compra segura, factura sin IVA (si aplica) y la
+                                obtención de matrículas de tránsito y seguro.</p>
+                        </div>
+                    </article>
+
+                    <article class="step-item" data-aos="fade-left" data-aos-delay="400">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4 data-i18n="proc4Title">Transporte y Matriculación</h4>
+                            <p data-i18n="proc4Desc">Traslado a España, pago de impuestos y matriculación definitiva.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <a class="nav-logo" href="index.html" style="margin-bottom: 20px;">
                     <span class="logo-text">EuroDrive</span>
                 </a>
-                <p class="header-tagline">Importación desde Alemania sin complicaciones</p>
-                <div class="controls">
-                    <label for="langSelector" class="visually-hidden">Idioma</label>
-                    <select id="langSelector" aria-label="Seleccionar idioma">
-                        <option value="es">ES</option>
-                        <option value="en">EN</option>
-                    </select>
-                    <button class="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">🌓</button>
-                </div>
+                <p data-i18n="footerPartner">Tu partner de confianza para subir el nivel de tu garaje con importaciones
+                    de élite desde Alemania.</p>
             </div>
-        </header>
-
-        <main>
-            <section class="hero hero--premium" aria-label="Hero principal">
-                <div class="container hero-wrapper">
-                    <div class="hero-content hero-content--premium">
-                        <p class="eyebrow">Importación premium desde Alemania</p>
-                        <h1 id="hero-h1">Tu coche desde Alemania, entregado en España</h1>
-                        <p id="hero-p">Cubrimos elección, verificación, transporte, aranceles y matriculación nacional.</p>
-                        <div class="hero-buttons">
-                            <a href="formulario.html" class="btn-primary" id="hero-btn">Empezar mi importación</a>
-                            <a href="#proceso" class="btn-outline">Ver proceso</a>
-                        </div>
-                        <div class="hero-badges">
-                            <span class="badge">✅ Asesor personal</span>
-                            <span class="badge">🚚 Transporte seguro</span>
-                            <span class="badge">🛡 Garantía europea</span>
-                        </div>
-                    </div>
-                    <div class="hero-image hero-image--premium" aria-hidden="true"></div>
-                </div>
-            </section>
-
-            <section class="container feature-section" aria-label="Características">
-                <h2>¿Por qué compran en Alemania?</h2>
-                <div class="feature-grid">
-                    <article class="feature-card">
-                        <div class="feature-icon">🛡</div>
-                        <h3>Más oferta</h3>
-                        <p>Acceso a inmenso stock con equipamiento real y kilometraje verificado.</p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-icon">📉</div>
-                        <h3>Mejor relación</h3>
-                        <p>Vehículos con más equipamiento por precios competitivos.</p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-icon">📚</div>
-                        <h3>Historial claro</h3>
-                        <p>Documentación auditada y pruebas de servicio.</p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-icon">⏱</div>
-                        <h3>Ahorro en tiempo y dinero</h3>
-                        <p>Proceso completo con entrega en 4-6 semanas.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="process-section" id="proceso" aria-label="Proceso paso a paso">
-                <div class="container">
-                    <h2>Así funciona (tú casi no tienes que hacer nada)</h2>
-                    <div class="step-grid">
-                        <article class="step-card">
-                            <span class="step-number">1</span>
-                            <div class="step-icon">💬</div>
-                            <h4>Definimos tu coche</h4>
-                            <p>Modelo, presupuesto, kilometraje y extras deseados.</p>
-                        </article>
-                        <article class="step-card">
-                            <span class="step-number">2</span>
-                            <div class="step-icon">🧑‍💼</div>
-                            <h4>Asignamos experto</h4>
-                            <p>Importador certificado te contacta en 24h.</p>
-                        </article>
-                        <article class="step-card">
-                            <span class="step-number">3</span>
-                            <div class="step-icon">🔍</div>
-                            <h4>Seleccionamos opciones</h4>
-                            <p>Filtramos las mejores unidades con historial limpio.</p>
-                        </article>
-                        <article class="step-card">
-                            <span class="step-number">4</span>
-                            <div class="step-icon">🛡️</div>
-                            <h4>Compra y control</h4>
-                            <p>Inspección en origen, pago seguro y documentos validados.</p>
-                        </article>
-                        <article class="step-card">
-                            <span class="step-number">5</span>
-                            <div class="step-icon">🚚</div>
-                            <h4>Transporte y matriculación</h4>
-                            <p>Entrega con matrícula española para conducir.</p>
-                        </article>
-                    </div>
-                    <div class="cta-button">
-                        <a href="formulario.html" class="btn-primary">Empezar mi importación</a>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="main-footer bg-footer">
-            <div class="container footer-grid">
-                <div>
-                    <h4>EuroDrive Import</h4>
-                    <p>Servicio integral de importación de coches desde Alemania a España.</p>
-                </div>
-                <div>
-                    <h4>Enlaces</h4>
-                    <a href="#proceso">Proceso</a>
-                    <a href="formulario.html">Formulario</a>
-                </div>
-                <div>
-                    <h4>Contacto</h4>
-                    <p>Tel: +34 667 260 898</p>
-                    <p>Email: eurodrive.import09@gmail.com</p>
-                </div>
-                <div>
-                    <h4>Legal</h4>
-                    <a href="#">Aviso legal</a>
-                    <a href="#">Privacidad</a>
-                    <a href="#">Términos</a>
-                </div>
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h4 data-i18n="footerNav">Navegación</h4>
+                <a href="#header" data-i18n="navInicio">Inicio</a>
+                <a href="#proceso" data-i18n="navProceso">El Proceso</a>
+                <a href="formulario.html" data-i18n="navSolicitud">Solicitud</a>
             </div>
-            <div class="container footer-bottom">
-                <p>© 2026 EuroDrive Import. Todos los derechos reservados.</p>
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h4 data-i18n="footerContact">Contacto Directo</h4>
+                <a href="tel:+34667260898">📞 +34 667 260 898</a>
+                <a href="mailto:eurodrive.import09@gmail.com">✉️ eurodrive.import09@gmail.com</a>
             </div>
-        </footer>
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+                <h4 data-i18n="footerLegal">Legal</h4>
+                <a href="#" data-i18n="legalAviso">Aviso Legal</a>
+                <a href="#" data-i18n="legalPrivacidad">Política de Privacidad</a>
+                <a href="#" data-i18n="legalTerminos">Términos de Servicio</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p id="footer-text" data-i18n="footerRights">© 2026 EuroDrive Import. Exclusividad y Profesionalidad.</p>
+        </div>
+    </footer>
 
-        <a href="https://wa.me/34667260898" class="whatsapp-btn" target="_blank" aria-label="Chat en WhatsApp">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
-            </svg>
-            <span>WhatsApp</span>
-        </a>
-    </div>
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/34667260898" class="whatsapp-btn" target="_blank" aria-label="Chat en WhatsApp"
+        data-aos="zoom-in" data-aos-delay="500">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
+            </path>
+        </svg>
+        <span>WhatsApp</span>
+    </a>
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Local JS -->
     <script src="script.js"></script>
 </body>
+
 </html>
