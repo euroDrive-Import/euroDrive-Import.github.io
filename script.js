@@ -1,11 +1,11 @@
 const translations = {
     es: {
         // Shared Nav & Footer
-        tagline: "Importación de Coches",
+        tagline: "Tu Puerta a la Excelencia Europea",
         navInicio: "Inicio",
         navProceso: "El Proceso",
         navSolicitud: "Solicitud",
-        footerPartner: "Tu partner de confianza para subir el nivel de tu garaje con importaciones de élite desde Alemania.",
+        footerPartner: "Tu partner de confianza para subir el nivel de tu garaje con importaciones de élite.",
         footerNav: "Navegación",
         footerContact: "Contacto Directo",
         footerLegal: "Legal",
@@ -25,7 +25,7 @@ const translations = {
         badge3: "🏎️ Entrega VIP",
 
         // Home - Features
-        featTitle: "¿Por qué el mercado <span id='dynamicMarket' class='flag-text-germany'>Alemán</span>?",
+        featTitle: "¿Por qué el mercado <br><span id='dynamicMarket' class='flag-text-germany'>Alemán</span>?",
         feat1Title: "Stock Exclusivo",
         feat1Desc: "Acceso a unidades limitadas, configuraciones full-equip y ediciones especiales que no llegan a España.",
         feat2Title: "Máxima Rentabilidad",
@@ -33,14 +33,14 @@ const translations = {
         feat3Title: "Transparencia Total",
         feat3Desc: "Historiales auditados, kilómetros certificados y mantenimientos en servicios oficiales rigurosos.",
         feat4Title: "Gestión Express",
-        feat4Desc: "Del concesionario alemán a tu garaje en tiempos récord con matriculación incluida.",
+        feat4Desc: "Del concesionario a tu garaje en tiempos récord con matriculación incluida.",
 
         // Home - Process
         procTitle: "Nuestra Metodología <span>Premium</span>",
         proc1Title: "Búsqueda Personalizada",
         proc1Desc: "Tú defines el modelo, presupuesto y extras. Nosotros rastreamos toda la red oficial alemana hasta encontrar la unidad perfecta.",
         proc2Title: "Verificación in situ",
-        proc2Desc: "Nuestros expertos en Alemania comprueban estado, historial de siniestralidad, pintura y mecánica antes de dar luz verde.",
+        proc2Desc: "Nuestros expertos comprueban estado, historial de siniestralidad, pintura y mecánica antes de dar luz verde.",
         proc3Title: "Compra y Burocracia",
         proc3Desc: "Gestionamos la compra segura, factura sin IVA (si aplica) y la obtención de matrículas de tránsito y seguro.",
         proc4Title: "Transporte y Matriculación",
@@ -87,11 +87,11 @@ const translations = {
     },
     en: {
         // Shared Nav & Footer
-        tagline: "Car Import",
+        tagline: "Your Gateway to European Excellence",
         navInicio: "Home",
         navProceso: "The Process",
         navSolicitud: "Application",
-        footerPartner: "Your trusted partner to level up your garage with elite imports from Germany.",
+        footerPartner: "Your trusted partner to level up your garage with elite imports.",
         footerNav: "Navigation",
         footerContact: "Direct Contact",
         footerLegal: "Legal",
@@ -111,7 +111,7 @@ const translations = {
         badge3: "🏎️ VIP Delivery",
 
         // Home - Features
-        featTitle: "Why the <span id='dynamicMarket' class='flag-text-germany'>German</span> market?",
+        featTitle: "Why the <br><span id='dynamicMarket' class='flag-text-germany'>German</span> market?",
         feat1Title: "Exclusive Stock",
         feat1Desc: "Access to limited units, fully-equipped configurations, and special editions not available locally.",
         feat2Title: "Maximum Profitability",
@@ -119,14 +119,14 @@ const translations = {
         feat3Title: "Total Transparency",
         feat3Desc: "Audited histories, certified mileage, and rigorous official service maintenance.",
         feat4Title: "Express Management",
-        feat4Desc: "From the German dealership to your garage in record time with registration included.",
+        feat4Desc: "From the dealership to your garage in record time with registration included.",
 
         // Home - Process
         procTitle: "Our <span>Premium</span> Methodology",
         proc1Title: "Personalized Search",
         proc1Desc: "You define the model, budget, and extras. We track the entire official German network to find the perfect unit.",
         proc2Title: "On-site Verification",
-        proc2Desc: "Our experts in Germany check the condition, accident history, paint, and mechanics before giving the green light.",
+        proc2Desc: "Our experts check condition, accident history, paint, and mechanics before giving the green light.",
         proc3Title: "Purchase & Bureaucracy",
         proc3Desc: "We manage the secure purchase, VAT-free invoice (if applicable), and obtain transit plates and insurance.",
         proc4Title: "Transport & Registration",
@@ -172,11 +172,11 @@ const translations = {
         phExtras: "Example: Leather seats, Sunroof, etc..."
     },
     fr: {
-        tagline: "Importation de Voitures",
+        tagline: "Votre Porte vers l'Excellence Européenne",
         navInicio: "Accueil",
         navProceso: "Le Processus",
         navSolicitud: "Demande",
-        footerPartner: "Votre partenaire de confiance pour élever le niveau de votre garage avec des importations d'élite d'Allemagne.",
+        footerPartner: "Votre partenaire de confiance pour élever le niveau de votre garage avec des importations d'élite.",
         footerNav: "Navigation",
         footerContact: "Contact Direct",
         footerLegal: "Légal",
@@ -192,7 +192,7 @@ const translations = {
         badge1: "✨ Conseiller Expert",
         badge2: "🛡️ Garantie Officielle",
         badge3: "🏎️ Livraison VIP",
-        featTitle: "Pourquoi le marché <span id='dynamicMarket' class='flag-text-germany'>Allemand</span> ?",
+        featTitle: "Pourquoi le marché <br><span id='dynamicMarket' class='flag-text-germany'>Allemand</span> ?",
         feat1Title: "Stock Exclusif",
         feat1Desc: "Accès à des unités limitées, des configurations toutes options et des éditions spéciales introuvables en Espagne.",
         feat2Title: "Rentabilité Maximale",
@@ -200,12 +200,12 @@ const translations = {
         feat3Title: "Transparence Totale",
         feat3Desc: "Historiques audités, kilométrages certifiés et entretiens rigoureux dans les services officiels.",
         feat4Title: "Gestion Express",
-        feat4Desc: "Du concessionnaire allemand à votre garage en un temps record avec immatriculation incluse.",
+        feat4Desc: "Du concessionnaire à votre garage en un temps record avec immatriculation incluse.",
         procTitle: "Notre Méthodologie <span>Premium</span>",
         proc1Title: "Recherche Personnalisée",
         proc1Desc: "Vous définissez le modèle, le budget et les options. Nous explorons l'ensemble du réseau officiel allemand pour trouver l'unité parfaite.",
         proc2Title: "Vérification sur place",
-        proc2Desc: "Nos experts en Allemagne vérifient l'état, l'historique des accidents, la peinture et la mécanique avant de donner le feu vert.",
+        proc2Desc: "Nos experts vérifient l'état, l'historique des accidents, la peinture et la mécanique avant de donner le feu vert.",
         proc3Title: "Achat & Bureaucratie",
         proc3Desc: "Nous gérons l'achat sécurisé, la facture hors taxes (si applicable) et obtenons les plaques de transit et l'assurance.",
         proc4Title: "Transport & Immatriculation",
@@ -244,11 +244,11 @@ const translations = {
         phExtras: "Exemple: Sièges en cuir, Toit ouvrant, etc..."
     },
     de: {
-        tagline: "Autoimport",
+        tagline: "Ihr Tor zu Europäischer Exzellenz",
         navInicio: "Startseite",
         navProceso: "Der Prozess",
         navSolicitud: "Anfrage",
-        footerPartner: "Ihr treuer Partner, um Ihre Garage mit Elite-Importen aus Deutschland aufzuwerten.",
+        footerPartner: "Ihr treuer Partner, um Ihre Garage mit Elite-Importen aufzuwerten.",
         footerNav: "Navigation",
         footerContact: "Direkter Kontakt",
         footerLegal: "Rechtliches",
@@ -264,7 +264,7 @@ const translations = {
         badge1: "✨ Expertenberater",
         badge2: "🛡️ Offizielle Garantie",
         badge3: "🏎️ VIP-Lieferung",
-        featTitle: "Warum der <span id='dynamicMarket' class='flag-text-germany'>Deutsche</span> Markt?",
+        featTitle: "Warum der <br><span id='dynamicMarket' class='flag-text-germany'>Deutsche</span> Markt?",
         feat1Title: "Exklusiver Bestand",
         feat1Desc: "Zugang zu limitierten Einheiten, voll ausgestatteten Konfigurationen und Sondereditionen, die in Spanien nicht erhältlich sind.",
         feat2Title: "Maximale Rentabilität",
@@ -272,12 +272,12 @@ const translations = {
         feat3Title: "Totale Transparenz",
         feat3Desc: "Geprüfte Historien, zertifizierte Kilometerstände und strenge Wartung bei offiziellen Diensten.",
         feat4Title: "Express-Management",
-        feat4Desc: "Vom deutschen Autohaus in Rekordzeit in Ihre Garage inklusive Zulassung.",
+        feat4Desc: "Vom Autohaus in Rekordzeit in Ihre Garage inklusive Zulassung.",
         procTitle: "Unsere <span>Premium</span> Methodik",
         proc1Title: "Personalisierte Suche",
         proc1Desc: "Sie definieren Modell, Budget und Extras. Wir durchsuchen das gesamte offizielle deutsche Netzwerk nach der perfekten Einheit.",
         proc2Title: "Vor-Ort-Überprüfung",
-        proc2Desc: "Unsere Experten in Deutschland prüfen Zustand, Unfallhistorie, Lack und Mechanik, bevor sie grünes Licht geben.",
+        proc2Desc: "Unsere Experten prüfen Zustand, Unfallhistorie, Lack und Mechanik, bevor sie grünes Licht geben.",
         proc3Title: "Kauf & Bürokratie",
         proc3Desc: "Wir verwalten den sicheren Kauf, die mehrwertsteuerfreie Rechnung (falls zutreffend) und besorgen Überführungskennzeichen und Versicherung.",
         proc4Title: "Transport & Zulassung",
@@ -316,11 +316,11 @@ const translations = {
         phExtras: "Beispiel: Ledersitze, Schiebedach, etc..."
     },
     tzm: {
-        tagline: "Asekcam n Tkerrusin",
+        tagline: "Tawwurt-nnk ɣer Tufazt n Turuft",
         navInicio: "Tazwara",
         navProceso: "Akatar",
         navSolicitud: "Aseḥyer",
-        footerPartner: "Amddakel-nnk yettwamnen akken ad tesnerneḍ lgaraj-nnk s isekyamen ifaznen seg Lalman.",
+        footerPartner: "Amddakel-nnk yettwamnen akken ad tesnerneḍ lgaraj-nnk s isekyamen ifaznen.",
         footerNav: "Anawag",
         footerContact: "Anermis usrid",
         footerLegal: "Asḍuf",
@@ -336,7 +336,7 @@ const translations = {
         badge1: "✨ Amsiweḍ amazzag",
         badge2: "🛡️ Agʷal amensab",
         badge3: "🏎️ Tikti VIP",
-        featTitle: "Acuɣer agadez <span id='dynamicMarket' class='flag-text-germany'>Almani</span>?",
+        featTitle: "Acuɣer agadez <br><span id='dynamicMarket' class='flag-text-germany'>Almani</span>?",
         feat1Title: "Asqerdec ifazden",
         feat1Desc: "Anekcum ɣer tiyita drusen, iwellihen full-equip d tsufa igucclanen.",
         feat2Title: "Tifrat Tameqqrant",
@@ -344,12 +344,12 @@ const translations = {
         feat3Title: "Tifrat Tamezwarut",
         feat3Desc: "Imezruyen yettuseggmen, ikilumitren igucclanen d tedwilt g isudaf.",
         feat4Title: "Asekcam Azzawal",
-        feat4Desc: "Seg tkeṛṛust talmanit ɣer lgaraj-nnk g wakud afeṣyan.",
+        feat4Desc: "Seg tkeṛṛust ɣer lgaraj-nnk g wakud afeṣyan.",
         procTitle: "Tarrayt-nneɣ <span>Tifazt</span>",
         proc1Title: "Anadi asekdan",
         proc1Desc: "Tessutureḍ amudil, afniq d teɣwawin. Nettedwel g uẓeṭṭa almani.",
         proc2Title: "Asenqed g wemkan",
-        proc2Desc: "Imazzagen-nneɣ g Lalman ttkadan addad d tmekanit qbel ad fken awal.",
+        proc2Desc: "Imazzagen-nneɣ ttkadan addad d tmekanit qbel ad fken awal.",
         proc3Title: "Tiɣin d Tarrayt",
         proc3Desc: "Nettedwel g tiɣin taminant, d tuṭṭfa n tmatrikiyin n usikel.",
         proc4Title: "Asikel d Ujerred",
@@ -527,24 +527,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const currentLang = localStorage.getItem('userLang') || 'es';
             
             if (spanCountry) {
-                spanCountry.style.opacity = 0;
+                spanCountry.classList.add('text-changing');
                 setTimeout(() => {
                     spanCountry.innerText = dynamicCountries[currentLang][currentCountryIdx];
                     spanCountry.className = countryClasses[currentCountryIdx];
-                    spanCountry.style.opacity = 1;
-                }, 300);
+                    spanCountry.classList.remove('text-changing');
+                }, 400);
             }
 
             if (spanMarket) {
-                spanMarket.style.opacity = 0;
+                spanMarket.classList.add('text-changing');
                 setTimeout(() => {
                     spanMarket.innerText = dynamicMarkets[currentLang][currentCountryIdx];
                     spanMarket.className = countryClasses[currentCountryIdx];
-                    spanMarket.style.opacity = 1;
-                }, 300);
+                    spanMarket.classList.remove('text-changing');
+                }, 400);
             }
         }
-    }, 1500);
+    }, 1800);
     
     // Apply lang immediately on load without visual jump
     setTimeout(() => {
